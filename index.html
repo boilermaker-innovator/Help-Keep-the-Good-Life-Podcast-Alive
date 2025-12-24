@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Launch the Good Life Podcast - iTabs</title>
+    <meta property="og:title" content="Help Launch the Good Life Podcast">
+    <meta property="og:description" content="Dean and Todd are raising funds to launch Good Life Podcast, an independent media venture focused on faith, truth, and recovery.">
+    <meta property="og:image" content="https://i.ibb.co/RkzBj0H9/photo.jpg">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Poppins',sans-serif;background:#f7f8fa;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+        .card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.12);max-width:420px;width:100%}
+        .slideshow{position:relative;width:100%;height:280px;background:linear-gradient(135deg,#01BC66,#00A659);overflow:hidden}
+        .slides-track{display:flex;height:100%;transition:transform 0.4s ease}
+        .slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#01BC66,#00A659)}
+        .slide img{max-width:100%;max-height:100%;object-fit:contain}
+        .dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:10}
+        .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;border:2px solid #fff;transition:all 0.3s}
+        .dot.active{background:#fff;transform:scale(1.25)}
+        .i-btn{position:absolute;bottom:18px;right:18px;width:54px;height:54px;background:#fff;color:#01BC66;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:30px;font-style:italic;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.25);border:3px solid #01BC66;z-index:20;transition:transform 0.2s}
+        .i-btn:hover{transform:scale(1.08)}
+        .auto-ind{position:absolute;top:15px;left:15px;background:rgba(0,0,0,0.4);color:#fff;padding:5px 12px;border-radius:20px;font-size:0.75em;z-index:10;display:flex;align-items:center;gap:6px}
+        .pulse{width:8px;height:8px;background:#fff;border-radius:50%;animation:pulse 1.5s infinite}
+        @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.85)}}
+        .content{padding:18px;text-align:center}
+        .content h2{color:#1a1a1a;font-size:1.1em;font-weight:600;margin-bottom:4px}
+        .content p{color:#718096;font-size:0.8em;margin-bottom:14px}
+        .donate-btn{display:block;width:100%;padding:14px;background:linear-gradient(135deg,#01BC66,#00A659);color:#fff;text-align:center;text-decoration:none;border-radius:12px;font-weight:600;font-size:1em;box-shadow:0 4px 15px rgba(2,169,92,0.3)}
+        .card-footer{text-align:center;padding:12px 18px 18px;font-size:0.8em;color:#718096;border-top:1px solid #e2e8f0}
+        .card-footer a{color:#01BC66;text-decoration:none}
+        .edit-link{text-align:center;margin-top:15px}
+        .edit-link a{color:#718096;text-decoration:none;font-size:0.85em}
+        .edit-link a:hover{color:#01BC66}
+        .popup-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;padding:15px}
+        .popup-overlay.active{display:flex}
+        .popup{background:#fff;border-radius:24px;max-width:420px;width:100%;max-height:85vh;overflow-y:auto;animation:slideUp 0.3s ease}
+        @keyframes slideUp{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}
+        .popup-header{background:linear-gradient(135deg,#01BC66,#00A659);color:#fff;padding:26px 22px;text-align:center;position:sticky;top:0;z-index:10}
+        .popup-header h3{font-size:1.35em;margin-bottom:4px}
+        .popup-header p{opacity:0.9;font-size:0.9em}
+        .close-btn{position:absolute;top:14px;right:14px;width:34px;height:34px;background:rgba(255,255,255,0.2);border:none;border-radius:50%;color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+        .popup-body{padding:24px}
+        .hook-box{background:linear-gradient(135deg,#E6FBF0,#f0fff6);border-left:4px solid #01BC66;padding:18px 20px;margin-bottom:24px;border-radius:0 14px 14px 0}
+        .hook-text{font-size:1.15em;font-weight:600;color:#1a1a1a;line-height:1.5}
+        .section{margin-bottom:22px}
+        .section h4{color:#01BC66;font-size:1.05em;font-weight:600;margin-bottom:8px}
+        .section p{color:#4a5568;line-height:1.7;font-size:0.95em}
+        .popup-btn{display:block;width:100%;padding:16px;background:linear-gradient(135deg,#01BC66,#00A659);color:#fff;text-align:center;text-decoration:none;border-radius:14px;font-weight:600;font-size:1.05em;margin-top:24px;box-shadow:0 4px 15px rgba(2,169,92,0.3)}
+        .footer{text-align:center;padding:15px;font-size:0.8em;color:#718096}
+        .footer a{color:#01BC66;text-decoration:none}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="slideshow" id="slideshow">
+            <div class="auto-ind" id="autoInd"><div class="pulse"></div><span>Auto</span></div>
+            <div class="slides-track" id="track">
+                <div class="slide"><img src="https://i.ibb.co/RkzBj0H9/photo.jpg" alt="Photo 1"></div>
+            </div>
+            <div class="dots" id="dots">
+                <div class="dot active" data-slide="0"></div>
+            </div>
+            <div class="i-btn" onclick="openPopup()">i</div>
+        </div>
+        <div class="content">
+            <h2>Help Launch the Good Life Podcast</h2>
+            <p>Swipe photos • Tap i for the full story</p>
+            <a href="https://www.gofundme.com/f/help-launch-the-good-life-podcast/donate?source=btn_donate" class="donate-btn" target="_blank">Donate Now</a>
+        </div>
+        <div class="card-footer">Made with ❤️ by <a href="https://itabs.ai" target="_blank">iTabs</a></div>
+    </div>
+    <div class="edit-link"><a href="https://itabs.ai/?data=JTdCJTIyY2FtcGFpZ25JZCUyMiUzQSUyMmhlbHAtbGF1bmNoLXRoZS1nb29kLWxpZmUtcG9kY2FzdCUyMiUyQyUyMmNhbXBhaWduTmFtZSUyMiUzQSUyMkhlbHAlMjBMYXVuY2glMjB0aGUlMjBHb29kJTIwTGlmZSUyMFBvZGNhc3QlMjIlMkMlMjJob29rTGluZSUyMiUzQSUyMkRlYW4lMjBhbmQlMjBUb2RkJTIwYXJlJTIwcmFpc2luZyUyMGZ1bmRzJTIwdG8lMjBsYXVuY2glMjBHb29kJTIwTGlmZSUyMFBvZGNhc3QlMkMlMjBhbiUyMGluZGVwZW5kZW50JTIwbWVkaWElMjB2ZW50dXJlJTIwZm9jdXNlZCUyMG9uJTIwZmFpdGglMkMlMjB0cnV0aCUyQyUyMGFuZCUyMHJlY292ZXJ5LiUyMiUyQyUyMnNlY3Rpb24xJTIyJTNBJTIyRGVhbiUyMGFuZCUyMFRvZGQlMjBhcmUlMjBsYXVuY2hpbmclMjBHb29kJTIwTGlmZSUyMFBvZGNhc3QlMjB0byUyMHByb3ZpZGUlMjB0aG91Z2h0ZnVsJTIwY29udmVyc2F0aW9ucyUyMG9uJTIwZmFpdGglMkMlMjB0cnV0aCUyQyUyMGFuZCUyMHJlY292ZXJ5LiUyMFRoZXklMjBhcmUlMjBjdXJyZW50bHklMjBwcm9kdWNpbmclMjBjb250ZW50JTIwb3V0JTIwb2YlMjBhJTIwYm9ycm93ZWQlMjBnYXJhZ2UlMjB3aXRob3V0JTIwYSUyMHN0dWRpbyUyQyUyMHN0YWZmJTJDJTIwb3IlMjBzaWduaWZpY2FudCUyMGZpbmFuY2lhbCUyMGJhY2tpbmcuJTIwRGVzcGl0ZSUyMGxpbWl0YXRpb25zJTJDJTIwdGhlJTIwZWFybHklMjByZXNwb25zZSUyMGhhcyUyMGJlZW4lMjBlbmNvdXJhZ2luZyUyMHdpdGglMjBtaWxsaW9ucyUyMG9mJTIwdmlld3MuJTIyJTJDJTIyc2VjdGlvbjIlMjIlM0ElMjJGaW5hbmNpYWwlMjBzdGFiaWxpdHklMjBpcyUyMG5lZWRlZCUyMHRvJTIwY29udGludWUlMjBvcGVyYXRpbmclMjBkdXJpbmclMjB0aGlzJTIwZWFybHklMjBzdGFnZS4lMjBTaG9ydC10ZXJtJTIwc3VwcG9ydCUyMHdpbGwlMjBhbGxvdyUyMHRoZW0lMjB0byUyMGtlZXAlMjBidWlsZGluZyUyMG1vbWVudHVtJTIwd2hpbGUlMjB0aGV5JTIwcHVyc3VlJTIwbG9uZy10ZXJtJTIwc3VzdGFpbmFiaWxpdHklMjB0aHJvdWdoJTIwYWR2ZXJ0aXNlcnMlMjBhbmQlMjBwYXJ0bmVyc2hpcHMuJTIwVGhpcyUyMHN1cHBvcnQlMjBjcmVhdGVzJTIwdGhlJTIwcnVud2F5JTIwbmVlZGVkJTIwZm9yJTIwdGhlJTIwcG9kY2FzdCUyMHRvJTIwc3RhbmQlMjBvbiUyMGl0cyUyMG93bi4lMjIlMkMlMjJzZWN0aW9uMyUyMiUzQSUyMkZ1bmRzJTIwd2lsbCUyMGdvJTIwZGlyZWN0bHklMjB0b3dhcmQlMjBiYXNpYyUyMGRvbWVzdGljJTIwbmVjZXNzaXRpZXMlMjBhbmQlMjBlc3NlbnRpYWwlMjBwcm9kdWN0aW9uJTIwYW5kJTIwb3BlcmF0aW9uYWwlMjBuZWVkcy4lMjIlMkMlMjJzZWN0aW9uNCUyMiUzQSUyMkRlYW4lMjBoYXMlMjBhJTIwbG9uZyUyMGhpc3RvcnklMjBpbiUyMGJyb2FkY2FzdCUyMG1lZGlhJTIwYW5kJTIwcHJvZHVjZXMlMjBHb29kJTIwTGlmZSUyMFRlbGV2aXNpb24lMkMlMjB3aGljaCUyMGFpcnMlMjBkYWlseSUyMGluJTIwU2FudGElMjBCYXJiYXJhJTIwQ291bnR5LiUyMEdvb2QlMjBMaWZlJTIwTWVkaWElMjBoYXMlMjBnZW5lcmF0ZWQlMjBtaWxsaW9ucyUyMG9mJTIwdmlld3MlMjBhbmQlMjBoYXMlMjBvdmVyJTIwNTAwJTJDMDAwJTIwZm9sbG93ZXJzJTIwYW5kJTIwc3Vic2NyaWJlcnMuJTIyJTJDJTIyYnV0dG9uVGV4dCUyMiUzQSUyMkRvbmF0ZSUyME5vdyUyMiUyQyUyMmJ1dHRvbkxpbmslMjIlM0ElMjJodHRwcyUzQSUyRiUyRnd3dy5nb2Z1bmRtZS5jb20lMkZmJTJGaGVscC1sYXVuY2gtdGhlLWdvb2QtbGlmZS1wb2RjYXN0JTJGZG9uYXRlJTNGc291cmNlJTNEYnRuX2RvbmF0ZSUyMiUyQyUyMmF1dG9wbGF5JTIyJTNBdHJ1ZSUyQyUyMmltYWdlcyUyMiUzQSU1QiUyMmh0dHBzJTNBJTJGJTJGaS5pYmIuY28lMkZSa3pCajBIOSUyRnBob3RvLmpwZyUyMiU1RCU3RA==" target="_blank">✏️ Edit This iTabs</a></div>
+
+    <div class="popup-overlay" id="popup" onclick="closePopup(event)">
+        <div class="popup" onclick="event.stopPropagation()">
+            <div class="popup-header">
+                <button class="close-btn" onclick="closePopup()">&times;</button>
+                <h3>Help Launch the Good Life Podcast</h3>
+                <p>The full story</p>
+            </div>
+            <div class="popup-body">
+                <div class="hook-box"><p class="hook-text">Dean and Todd are raising funds to launch Good Life Podcast, an independent media venture focused on faith, truth, and recovery.</p></div>
+                <div class="section"><h4>🚨 The Crisis</h4><p>Dean and Todd are launching Good Life Podcast to provide thoughtful conversations on faith, truth, and recovery. They are currently producing content out of a borrowed garage without a studio, staff, or significant financial backing. Despite limitations, the early response has been encouraging with millions of views.</p></div>
+                <div class="section"><h4>💔 Why We Need Help</h4><p>Financial stability is needed to continue operating during this early stage. Short-term support will allow them to keep building momentum while they pursue long-term sustainability through advertisers and partnerships. This support creates the runway needed for the podcast to stand on its own.</p></div>
+                <div class="section"><h4>💰 Where Money Goes</h4><p>Funds will go directly toward basic domestic necessities and essential production and operational needs.</p></div>
+                <div class="section"><h4>✅ Why Trust This</h4><p>Dean has a long history in broadcast media and produces Good Life Television, which airs daily in Santa Barbara County. Good Life Media has generated millions of views and has over 500,000 followers and subscribers.</p></div>
+                <a href="https://www.gofundme.com/f/help-launch-the-good-life-podcast/donate?source=btn_donate" class="popup-btn" target="_blank">Donate Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cur=0,auto=true,intv;
+        const total=1;
+        function goTo(i){cur=i;document.getElementById('track').style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',parseInt(d.getAttribute('data-slide'))===cur))}
+        function next(){cur=(cur+1)%total;goTo(cur)}
+        function startAuto(){if(auto&&total>1){intv=setInterval(next,3000)}}
+        function stopAuto(){clearInterval(intv)}
+        function openPopup(){document.getElementById('popup').classList.add('active');document.body.style.overflow='hidden';stopAuto()}
+        function closePopup(e){if(!e||e.target.id==='popup'||e.target.classList.contains('close-btn')){document.getElementById('popup').classList.remove('active');document.body.style.overflow='';startAuto()}}
+        document.addEventListener('keydown',e=>{if(e.key==='Escape')closePopup()});
+        document.querySelectorAll('.dot').forEach(d=>d.addEventListener('click',()=>goTo(parseInt(d.getAttribute('data-slide')))));
+        let sx=0;document.getElementById('slideshow').addEventListener('touchstart',e=>sx=e.changedTouches[0].screenX);
+        document.getElementById('slideshow').addEventListener('touchend',e=>{const d=sx-e.changedTouches[0].screenX;if(Math.abs(d)>50){d>0?next():goTo((cur-1+total)%total)}});
+        startAuto();
+    </script>
+</body>
+</html>
