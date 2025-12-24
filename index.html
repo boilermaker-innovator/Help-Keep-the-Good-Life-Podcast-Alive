@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Launch the Good Life Podcast - iTabs</title>
-    <meta property="og:title" content="Help Launch the Good Life Podcast">
-    <meta property="og:description" content="Dean and Todd are raising funds to launch Good Life Podcast, an independent media venture focused on faith, truth, and recovery.">
-    <meta property="og:image" content="https://d2g8igdw686xgo.cloudfront.net/98048975_1765947067279125_r.jpg">
+    <title>Help Keep the Good Life Podcast Alive - iTabs</title>
+    <meta property="og:title" content="Help Keep the Good Life Podcast Alive">
+    <meta property="og:description" content="Good Life Podcast is at a critical point. Dean and Todd need your support to keep the show alive.">
+    <meta property="og:image" content="https://i.ibb.co/Swg9GfzD/IMG-2395.jpg">
     <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +16,7 @@
         .slideshow{position:relative;width:100%;height:280px;background:linear-gradient(135deg,#01BC66,#00A659);overflow:hidden}
         .slides-track{display:flex;height:100%;transition:transform 0.4s ease}
         .slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#01BC66,#00A659)}
-        .slide img{max-width:100%;max-height:100%;object-fit:contain}
+        .slide img{width:100%;height:100%;object-fit:cover}
         .dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:10}
         .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;border:2px solid #fff;transition:all 0.3s}
         .dot.active{background:#fff;transform:scale(1.25)}
@@ -31,9 +31,6 @@
         .donate-btn{display:block;width:100%;padding:14px;background:linear-gradient(135deg,#01BC66,#00A659);color:#fff;text-align:center;text-decoration:none;border-radius:12px;font-weight:600;font-size:1em;box-shadow:0 4px 15px rgba(2,169,92,0.3)}
         .card-footer{text-align:center;padding:12px 18px 18px;font-size:0.8em;color:#718096;border-top:1px solid #e2e8f0}
         .card-footer a{color:#01BC66;text-decoration:none}
-        .edit-link{text-align:center;margin-top:15px}
-        .edit-link a{color:#718096;text-decoration:none;font-size:0.85em}
-        .edit-link a:hover{color:#01BC66}
         .popup-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;padding:15px}
         .popup-overlay.active{display:flex}
         .popup{background:#fff;border-radius:24px;max-width:420px;width:100%;max-height:85vh;overflow-y:auto;animation:slideUp 0.3s ease}
@@ -56,35 +53,39 @@
         <div class="slideshow" id="slideshow">
             <div class="auto-ind" id="autoInd"><div class="pulse"></div><span>Auto</span></div>
             <div class="slides-track" id="track">
-                <div class="slide"><img src="https://d2g8igdw686xgo.cloudfront.net/98048975_1765947067279125_r.jpg" alt="Good Life Podcast"></div>
+                <div class="slide"><img src="https://i.ibb.co/Swg9GfzD/IMG-2395.jpg" alt="Dean Wilson"></div>
+                <div class="slide"><img src="https://i.ibb.co/4gfS9Mfc/goodlifepod01.webp" alt="Good Life Podcast"></div>
+                <div class="slide"><img src="https://i.ibb.co/7J31PzJP/IMG-3509-1.jpg" alt="Good Life Studio"></div>
+                <div class="slide"><img src="https://i.ibb.co/SDwcmTWL/IMG-3510.jpg" alt="Good Life Team"></div>
             </div>
             <div class="dots" id="dots">
                 <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+                <div class="dot" data-slide="3"></div>
             </div>
             <div class="i-btn" onclick="openPopup()">i</div>
         </div>
         <div class="content">
-            <h2>Help Launch the Good Life Podcast</h2>
+            <h2>Help Keep the Good Life Podcast Alive</h2>
             <p>Swipe photos • Tap i for the full story</p>
             <a href="https://www.gofundme.com/f/help-launch-the-good-life-podcast/donate?source=btn_donate" class="donate-btn" target="_blank">Donate Now</a>
         </div>
         <div class="card-footer">Made with ❤️ by <a href="https://itabs.ai" target="_blank">iTabs</a></div>
     </div>
-    <div class="edit-link"><a href="https://itabs.ai" target="_blank">✏️ Edit This iTabs</a></div>
 
     <div class="popup-overlay" id="popup" onclick="closePopup(event)">
         <div class="popup" onclick="event.stopPropagation()">
             <div class="popup-header">
                 <button class="close-btn" onclick="closePopup()">&times;</button>
-                <h3>Help Launch the Good Life Podcast</h3>
+                <h3>Help Keep the Good Life Podcast Alive</h3>
                 <p>The full story</p>
             </div>
             <div class="popup-body">
-                <div class="hook-box"><p class="hook-text">Dean and Todd are raising funds to launch Good Life Podcast, an independent media venture focused on faith, truth, and recovery.</p></div>
-                <div class="section"><h4>🚨 The Crisis</h4><p>Dean and Todd are launching Good Life Podcast to provide thoughtful conversations on faith, truth, and recovery. They are currently producing content out of a borrowed garage without a studio, staff, or significant financial backing. Despite limitations, the early response has been encouraging with millions of views.</p></div>
-                <div class="section"><h4>💔 Why We Need Help</h4><p>Financial stability is needed to continue operating during this early stage. Short-term support will allow them to keep building momentum while they pursue long-term sustainability through advertisers and partnerships. This support creates the runway needed for the podcast to stand on its own.</p></div>
-                <div class="section"><h4>💰 Where Money Goes</h4><p>Funds will go directly toward basic domestic necessities and essential production and operational needs.</p></div>
-                <div class="section"><h4>✅ Why Trust This</h4><p>Dean has a long history in broadcast media and produces Good Life Television, which airs daily in Santa Barbara County. Good Life Media has generated millions of views and has over 500,000 followers and subscribers.</p></div>
+                <div class="hook-box"><p class="hook-text">Good Life Podcast is at a critical point. Dean and Todd need your support to keep the show alive.</p></div>
+                <div class="section"><h4>🚨 The Crisis</h4><p>Good Life Podcast is at a critical point. Dean and Todd are producing the show independently, without investors, sponsors, or outside financial backing, while momentum continues to grow. Without an increase in near-term support, they may not be able to keep the podcast alive in its current form. Support right now directly impacts whether Good Life can continue.</p></div>
+                <div class="section"><h4>💰 Where the Money Goes</h4><p>Immediate financial support covers core domestic and operational costs that are at risk of being shut down. Funds go toward basic needs, equipment, hosting, and other essentials required to keep episodes being produced. This support directly determines whether Good Life can continue.</p></div>
+                <div class="section"><h4>✅ Why Trust This</h4><p>Dean brings more than 30 years of broadcast media experience dating back to college, with a long history of on-air work and audience engagement. Todd adds extensive digital media and production expertise, providing the technical and operational foundation that makes Good Life possible.</p></div>
                 <a href="https://www.gofundme.com/f/help-launch-the-good-life-podcast/donate?source=btn_donate" class="popup-btn" target="_blank">Donate Now</a>
             </div>
         </div>
@@ -92,7 +93,7 @@
 
     <script>
         let cur=0,auto=true,intv;
-        const total=1;
+        const total=4;
         function goTo(i){cur=i;document.getElementById('track').style.transform='translateX(-'+cur*100+'%)';document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',parseInt(d.getAttribute('data-slide'))===cur))}
         function next(){cur=(cur+1)%total;goTo(cur)}
         function startAuto(){if(auto&&total>1){intv=setInterval(next,3000)}}
